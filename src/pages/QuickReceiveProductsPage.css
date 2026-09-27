@@ -20,7 +20,7 @@
 }
 
 .page-icon {
-  color: #4f46e5;
+  color: var(--primary-500);
   flex-shrink: 0;
 }
 
@@ -82,9 +82,9 @@
 }
 
 .summary-card.info {
-  background: #eff6ff;
-  border-color: #3b82f6;
-  color: #1e40af;
+  background: var(--primary-50);
+  border-color: var(--primary-500);
+  color: var(--primary-800);
 }
 
 .summary-card.error {
@@ -239,8 +239,8 @@
 .products-table input:focus,
 .products-table select:focus {
   outline: none;
-  border-color: #4f46e5;
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
 }
 
 .input-number {
@@ -304,24 +304,24 @@
 }
 
 .btn-primary {
-  background: #4f46e5;
+  background: var(--primary-500);
   color: white;
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: #4338ca;
+  background: var(--primary-600);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 4px 12px hsl(var(--primary) / 0.3);
 }
 
 .btn-secondary {
   background: white;
-  color: #4f46e5;
-  border: 2px solid #4f46e5;
+  color: var(--primary-500);
+  border: 2px solid var(--primary-500);
 }
 
 .btn-secondary:hover:not(:disabled) {
-  background: #f5f3ff;
+  background: var(--primary-50);
 }
 
 .btn-outline {

@@ -433,7 +433,7 @@ function OrderFormPage() {
                                         fontWeight: 500,
                                         cursor: 'pointer',
                                         background: deliveryMethod === 'home' ? 'white' : 'transparent',
-                                        color: deliveryMethod === 'home' ? '#2563eb' : '#64748b',
+                                        color: deliveryMethod === 'home' ? 'var(--primary-600)' : '#64748b',
                                         boxShadow: deliveryMethod === 'home' ? '0 1px 2px rgba(0,0,0,0.1)' : 'none'
                                     }}
                                     onClick={() => setDeliveryMethod('home')}
@@ -449,7 +449,7 @@ function OrderFormPage() {
                                         fontWeight: 500,
                                         cursor: 'pointer',
                                         background: deliveryMethod === 'pickup' ? 'white' : 'transparent',
-                                        color: deliveryMethod === 'pickup' ? '#2563eb' : '#64748b',
+                                        color: deliveryMethod === 'pickup' ? 'var(--primary-600)' : '#64748b',
                                         boxShadow: deliveryMethod === 'pickup' ? '0 1px 2px rgba(0,0,0,0.1)' : 'none'
                                     }}
                                     onClick={() => setDeliveryMethod('pickup')}
@@ -460,16 +460,16 @@ function OrderFormPage() {
                         </div>
 
                         {deliveryMethod === 'pickup' ? (
-                            <div style={{ padding: '20px', background: '#eff6ff', borderRadius: '8px', border: '1px solid #dbeafe' }}>
+                            <div style={{ padding: '20px', background: 'var(--primary-50)', borderRadius: '8px', border: '1px solid var(--primary-100)' }}>
                                 <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
                                     <Store className="text-blue-600" size={24} style={{ marginTop: '4px' }} />
                                     <div>
-                                        <h3 style={{ margin: '0 0 8px 0', color: '#1e3a8a', fontSize: '16px', fontWeight: 600 }}>{t('orders.manual.pickup.selectedTitle')}</h3>
-                                        <p style={{ margin: '0 0 16px 0', color: '#1e40af', fontSize: '14px' }}>
+                                        <h3 style={{ margin: '0 0 8px 0', color: 'var(--primary-900)', fontSize: '16px', fontWeight: 600 }}>{t('orders.manual.pickup.selectedTitle')}</h3>
+                                        <p style={{ margin: '0 0 16px 0', color: 'var(--primary-800)', fontSize: '14px' }}>
                                             {t('orders.manual.pickup.selectedDesc')}
                                         </p>
 
-                                        <label className="form-label" style={{ color: '#1e40af', marginBottom: '8px', display: 'block' }}>
+                                        <label className="form-label" style={{ color: 'var(--primary-800)', marginBottom: '8px', display: 'block' }}>
                                             {t('orders.manual.pickup.selectWarehouse')}
                                         </label>
                                         <select
@@ -625,17 +625,17 @@ function OrderFormPage() {
                                 </div>
                             </div>
                         ) : (
-                            <div style={{ background: '#eff6ff', border: '1px solid #dbeafe', borderRadius: '8px', padding: '16px' }}>
+                            <div style={{ background: 'var(--primary-50)', border: '1px solid var(--primary-100)', borderRadius: '8px', padding: '16px' }}>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                                     <div>
-                                        <div style={{ fontWeight: 600, color: '#1e3a8a', marginBottom: '4px' }}>
+                                        <div style={{ fontWeight: 600, color: 'var(--primary-900)', marginBottom: '4px' }}>
                                             {selectedUser.username || `${selectedUser.first_name || ''} ${selectedUser.last_name || ''}`}
                                         </div>
-                                        <div style={{ fontSize: '13px', color: '#1e40af' }}>{selectedUser.email}</div>
-                                        <div style={{ fontSize: '13px', color: '#1e40af' }}>{selectedUser.phone}</div>
+                                        <div style={{ fontSize: '13px', color: 'var(--primary-800)' }}>{selectedUser.email}</div>
+                                        <div style={{ fontSize: '13px', color: 'var(--primary-800)' }}>{selectedUser.phone}</div>
                                     </div>
                                     <button
-                                        style={{ background: 'none', border: 'none', color: '#3b82f6', cursor: 'pointer', fontSize: '13px', fontWeight: 500 }}
+                                        style={{ background: 'none', border: 'none', color: 'var(--primary-500)', cursor: 'pointer', fontSize: '13px', fontWeight: 500 }}
                                         onClick={() => setSelectedUser(null)}
                                     >
                                         {t('orders.manual.customer.change')}
@@ -679,7 +679,7 @@ function OrderFormPage() {
 
                             <div style={{ borderTop: '1px solid #e2e8f0', paddingTop: '12px', marginTop: '4px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                 <span style={{ fontWeight: 700, fontSize: '18px', color: '#1e293b' }}>{t('orders.manual.summary.total')}</span>
-                                <span style={{ fontWeight: 700, fontSize: '20px', color: '#2563eb' }}>{formatCurrency(total)}</span>
+                                <span style={{ fontWeight: 700, fontSize: '20px', color: 'var(--primary-600)' }}>{formatCurrency(total)}</span>
                             </div>
 
                             <button

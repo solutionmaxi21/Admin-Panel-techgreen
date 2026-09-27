@@ -221,10 +221,13 @@
   height: 48px;
 }
 
+/* Meme correction que dans actions.css : le bleu Tailwind par defaut devient
+   le bleu de marque #043b90, et l'indigo de "consulter" devient l'orange
+   d'accent pour rester distinguable du bleu de "modifier". */
 .btn-icon.edit:hover {
-  background: #dbeafe;
-  color: #2563eb;
-  border-color: #3b82f6;
+  background: var(--primary-100);
+  color: var(--primary-600);
+  border-color: var(--primary-500);
 }
 
 .btn-icon.delete:hover {
@@ -234,9 +237,9 @@
 }
 
 .btn-icon.view:hover {
-  background: #e0e7ff;
-  color: #4f46e5;
-  border-color: #6366f1;
+  background: var(--accent-100);
+  color: var(--accent-700);
+  border-color: var(--accent-500);
 }
 
 /* ============================================
@@ -330,7 +333,9 @@
 }
 
 [data-theme='dark'] .btn-outline.btn-primary:hover:not(:disabled) {
-  background: rgba(28, 58, 110, 0.15);
+  /* Etait rgba(28, 58, 110, 0.15) : un bleu marine proche de l'ancienne rampe
+     hsl(220 ...), pas du bleu de marque. Aligne sur #043b90. */
+  background: hsl(var(--primary) / 0.15);
 }
 
 [data-theme='dark'] .btn-outline.btn-success:hover:not(:disabled) {

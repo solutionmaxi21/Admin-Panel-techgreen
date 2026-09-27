@@ -181,8 +181,8 @@
 }
 
 .notification-card.unread {
-    background: rgba(59, 130, 246, 0.05);
-    border-left: 3px solid #3b82f6;
+    background: hsl(var(--primary) / 0.05);
+    border-left: 3px solid var(--primary-500);
 }
 
 .notification-icon {
@@ -197,7 +197,7 @@
 }
 
 .notification-icon .icon-blue {
-    color: #3b82f6;
+    color: var(--primary-500);
 }
 
 .notification-icon .icon-cyan {
@@ -254,7 +254,7 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #3b82f6;
+    background: var(--primary-500);
 }
 
 .notification-message {
@@ -313,7 +313,7 @@
 }
 
 [data-theme="dark"] .notification-card.unread {
-    background: rgba(59, 130, 246, 0.1);
+    background: hsl(var(--primary) / 0.1);
 }
 
 [data-theme="dark"] .notification-icon {

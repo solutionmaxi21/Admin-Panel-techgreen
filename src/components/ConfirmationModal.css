@@ -60,8 +60,8 @@
 }
 
 .modal-info .modal-icon-wrapper {
-    background-color: #dbeafe;
-    color: #2563eb;
+    background-color: var(--primary-100);
+    color: var(--primary-600);
 }
 
 .modal-title-wrapper {
@@ -120,8 +120,8 @@
 }
 
 .modal-input:focus {
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+    border-color: var(--primary-500);
+    box-shadow: 0 0 0 2px hsl(var(--primary) / 0.1);
 }
 
 .modal-footer {
@@ -165,11 +165,11 @@
 }
 
 .btn-primary.btn-confirm {
-    background-color: #3b82f6;
+    background-color: var(--primary-500);
 }
 
 .btn-primary.btn-confirm:hover {
-    background-color: #2563eb;
+    background-color: var(--primary-600);
 }
 
 .btn-danger.btn-confirm {

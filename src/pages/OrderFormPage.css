@@ -38,12 +38,12 @@
     gap: 8px;
     cursor: pointer;
     transition: all 0.2s;
-    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+    box-shadow: 0 2px 4px hsl(var(--primary) / 0.2);
 }
 
 .btn-primary:hover:not(:disabled) {
-    background: var(--primary-hover, #1d4ed8);
-    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
+    background: var(--primary-600);
+    box-shadow: 0 4px 6px hsl(var(--primary) / 0.3);
 }
 
 .btn-primary:disabled {
@@ -129,8 +129,8 @@
 .form-select:focus,
 .form-textarea:focus {
     outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    border-color: var(--primary-500);
+    box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
 }
 
 /* User & Product Search */

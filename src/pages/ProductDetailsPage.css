@@ -488,7 +488,7 @@
 .product-details-page .thumbnail.active {
     opacity: 1;
     border-color: var(--primary-600, #1c3a6e);
-    box-shadow: 0 0 0 3px rgba(28, 58, 110, 0.1);
+    box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
 }
 
 .product-details-page .thumbnail img {

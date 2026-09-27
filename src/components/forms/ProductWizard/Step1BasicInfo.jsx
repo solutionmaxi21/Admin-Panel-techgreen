@@ -356,7 +356,7 @@ const Step1BasicInfo = ({ formData, updateFormData, errors, clearError, setStepV
         }
 
         .barcode-label svg {
-          color: #0366d6;
+          color: var(--primary-500);
         }
 
         .barcode-hint-text {

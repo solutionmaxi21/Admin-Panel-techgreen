@@ -82,18 +82,22 @@
   border-color: #dc2626;
 }
 
+/* "Modifier" porte le bleu de marque #043b90. Les valeurs precedentes
+   (#dbeafe / #3b82f6 / #bfdbfe / #2563eb / #1e40af / #1e3a8a) etaient le bleu
+   Tailwind par defaut, pas celui du site. Passees en jetons : la rampe
+   --primary-* bascule en mode sombre, ce que les litteraux ne faisaient pas. */
 .action-btn.edit,
 .action-btn.primary {
-  background: #dbeafe;
-  color: #1e40af;
-  border-color: #3b82f6;
+  background: var(--primary-100);
+  color: var(--primary-700);
+  border-color: var(--primary-500);
 }
 
 .action-btn.edit:hover,
 .action-btn.primary:hover {
-  background: #bfdbfe;
-  border-color: #2563eb;
-  color: #1e3a8a;
+  background: var(--primary-200);
+  border-color: var(--primary-600);
+  color: var(--primary-800);
 }
 
 .action-btn.warning {
@@ -140,15 +144,19 @@
 }
 
 .action-btn-icon.edit:hover {
-  background: #dbeafe;
-  color: #2563eb;
-  border-color: #3b82f6;
+  background: var(--primary-100);
+  color: var(--primary-600);
+  border-color: var(--primary-500);
 }
 
+/* "Consulter" etait en indigo (#e0e7ff / #4f46e5 / #6366f1), une troisieme
+   famille de bleu sans rapport avec la marque. Aligne sur l'orange d'accent et
+   NON sur le bleu primaire : .edit:hover juste au-dessus est deja bleu, et deux
+   actions distinctes rendues a l'identique au survol serait une regression. */
 .action-btn-icon.view:hover {
-  background: #e0e7ff;
-  color: #4f46e5;
-  border-color: #6366f1;
+  background: var(--accent-100);
+  color: var(--accent-700);
+  border-color: var(--accent-500);
 }
 
 /* ============================================

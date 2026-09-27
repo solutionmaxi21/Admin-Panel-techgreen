@@ -86,7 +86,7 @@
   background: var(--primary-700);
   color: white;
   border-color: var(--primary-700);
-  box-shadow: 0 4px 12px rgba(28, 58, 110, 0.2);
+  box-shadow: 0 4px 12px hsl(var(--primary) / 0.2);
 }
 
 .tab-count {

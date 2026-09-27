@@ -596,7 +596,7 @@ const ProductDetailsPage = () => {
                                                 </td>
                                                 <td style={{ padding: '0.75rem', textAlign: 'center' }}>
                                                     {(v.is_default || v.isDefault) ? (
-                                                        <Star size={16} fill="#0366d6" stroke="#0366d6" />
+                                                        <Star size={16} fill="#043b90" stroke="#043b90" />
                                                     ) : null}
                                                 </td>
                                             </tr>

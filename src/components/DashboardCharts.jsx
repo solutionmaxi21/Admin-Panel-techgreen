@@ -8,7 +8,15 @@ import { formatCurrency } from '../utils/formatters';
 import { getLocalizedText } from '../utils/localization';
 import './DashboardCharts.css'; // Make sure this file exists
 
-const COLORS = ['#0f172a', '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#14b8a6', '#f97316', '#6366f1'];
+// Palette de graphiques ancree sur la marque. Les cinq premieres valeurs sont
+// exactement --chart-1..5 de la feuille de style de solutionmaxi.dz ; les
+// suivantes prolongent la meme famille (bleu et orange de marque, plus les
+// teintes claires du logo) pour couvrir les categories au-dela de cinq.
+//
+// Valeurs litterales et non var(--chart-N) : Recharts ecrit `fill` comme
+// attribut de presentation SVG, et un var() dans un attribut de presentation
+// n'est pas resolu par le navigateur — toutes les parts seraient noires.
+const COLORS = ['#043b90', '#fa5d36', '#f99c00', '#fcbb00', '#ff2357', '#195cc7', '#fc997e', '#66a3e0', '#c2410c', '#f86822'];
 
 export const SalesChart = ({ data, period, onPeriodChange, loading }) => {
   const { t, i18n } = useTranslation();
@@ -189,8 +197,8 @@ export const SalesChart = ({ data, period, onPeriodChange, loading }) => {
           <AreaChart data={formattedData} margin={{ top: 10, right: 10, left: 20, bottom: 0 }}>
             <defs>
               <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.2} />
-                <stop offset="95%" stopColor="#3b82f6" stopOpacity={0} />
+                <stop offset="5%" stopColor="#195cc7" stopOpacity={0.2} />
+                <stop offset="95%" stopColor="#195cc7" stopOpacity={0} />
               </linearGradient>
             </defs>
             <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="hsl(var(--border))" />
@@ -214,7 +222,7 @@ export const SalesChart = ({ data, period, onPeriodChange, loading }) => {
             <Area
               type="monotone"
               dataKey="amount"
-              stroke="#3b82f6"
+              stroke="#195cc7"
               strokeWidth={3}
               fillOpacity={1}
               fill="url(#colorRevenue)"

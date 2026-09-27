@@ -51,8 +51,8 @@
 
 .input:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
 }
 
 .alert {
@@ -127,8 +127,8 @@
 }
 
 .badge-public {
-  background-color: #dbeafe;
-  color: #1e40af;
+  background-color: var(--primary-100);
+  color: var(--primary-800);
 }
 
 .badge-authenticated {
@@ -188,12 +188,12 @@
 }
 
 .btn-primary {
-  background-color: #3b82f6;
+  background-color: var(--primary-500);
   color: white;
 }
 
 .btn-primary:hover:not(:disabled) {
-  background-color: #2563eb;
+  background-color: var(--primary-600);
 }
 
 .btn-secondary {

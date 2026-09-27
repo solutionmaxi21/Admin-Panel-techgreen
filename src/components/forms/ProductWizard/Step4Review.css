@@ -36,7 +36,7 @@
 .section-icon {
   width: 1.5rem;
   height: 1.5rem;
-  color: #3b82f6;
+  color: var(--primary-500);
   flex-shrink: 0;
 }
 
@@ -45,7 +45,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: #3b82f6;
+  background: var(--primary-500);
   color: white;
   border: none;
   border-radius: 0.5rem;
@@ -56,9 +56,9 @@
 }
 
 .btn-edit:hover {
-  background: #2563eb;
+  background: var(--primary-600);
   transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 8px hsl(var(--primary) / 0.3);
 }
 
 .btn-edit svg {
@@ -228,7 +228,7 @@
   top: 0.5rem;
   left: 0.5rem;
   padding: 0.25rem 0.625rem;
-  background: #3b82f6;
+  background: var(--primary-500);
   color: white;
   border-radius: 0.25rem;
   font-size: 0.625rem;
@@ -398,8 +398,8 @@
   display: flex;
   gap: 1rem;
   padding: 1.25rem 1.5rem;
-  background: #eff6ff;
-  border: 1px solid #bfdbfe;
+  background: var(--primary-50);
+  border: 1px solid var(--primary-200);
   border-radius: 0.75rem;
   margin-top: 2rem;
 }
@@ -407,20 +407,20 @@
 .notice-icon {
   width: 1.5rem;
   height: 1.5rem;
-  color: #3b82f6;
+  color: var(--primary-500);
   flex-shrink: 0;
   margin-top: 0.125rem;
 }
 
 .submit-notice p {
   margin: 0;
-  color: #1e40af;
+  color: var(--primary-800);
   line-height: 1.6;
   font-size: 0.9375rem;
 }
 
 .submit-notice strong {
-  color: #1e3a8a;
+  color: var(--primary-900);
 }
 
 /* Responsive Design */
@@ -514,8 +514,8 @@
 }
 
 .variant-review-card.is-default {
-  border-color: #3b82f6;
-  background: #eff6ff;
+  border-color: var(--primary-500);
+  background: var(--primary-50);
 }
 
 .variant-review-header {
@@ -540,7 +540,7 @@
 }
 
 .variant-review-card.is-default .variant-review-badge {
-  background: #3b82f6;
+  background: var(--primary-500);
   color: #fff;
 }
 
@@ -554,8 +554,8 @@
   margin-left: auto;
   font-size: 11px;
   font-weight: 600;
-  color: #3b82f6;
-  background: #dbeafe;
+  color: var(--primary-500);
+  background: var(--primary-100);
   padding: 2px 8px;
   border-radius: 9999px;
 }

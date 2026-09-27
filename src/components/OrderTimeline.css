@@ -286,7 +286,7 @@
 }
 
 [data-theme='dark'] .actor-badge.admin {
-  background: rgba(59, 130, 246, 0.1);
+  background: hsl(var(--primary) / 0.1);
 }
 
 [data-theme='dark'] .timeline-bubble.return-bubble {

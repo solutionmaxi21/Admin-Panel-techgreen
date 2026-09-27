@@ -626,8 +626,8 @@ input.product-search-input {
 
 /* Color swatches gradients overrides for vanilla CSS */
 .gradient-swatch.from-blue-500.to-cyan-500 {
-  background: linear-gradient(135deg, #3b82f6, #06b6d4) !important;
-  background-color: #3b82f6 !important;
+  background: linear-gradient(135deg, var(--primary-500), #06b6d4) !important;
+  background-color: var(--primary-500) !important;
 }
 .gradient-swatch.from-purple-500.to-pink-500 {
   background: linear-gradient(135deg, #a855f7, #ec4899) !important;
@@ -642,7 +642,7 @@ input.product-search-input {
   background-color: #34d399 !important;
 }
 .gradient-swatch.from-indigo-500.to-blue-600 {
-  background: linear-gradient(135deg, #6366f1, #2563eb) !important;
+  background: linear-gradient(135deg, #6366f1, var(--primary-600)) !important;
   background-color: #6366f1 !important;
 }
 .gradient-swatch.from-amber-400.to-orange-500 {
@@ -720,7 +720,7 @@ input.product-search-input {
 }
 
 [data-theme="dark"] .image-upload-zone:hover, [data-theme="dark"] .image-upload-zone.drag-over {
-  background-color: rgba(99, 102, 241, 0.15) !important;
+  background-color: hsl(var(--primary) / 0.15) !important;
 }
 
 .add-benefit-btn {
@@ -734,7 +734,7 @@ input.product-search-input {
 }
 
 [data-theme="dark"] .add-benefit-btn:hover {
-  background-color: rgba(99, 102, 241, 0.15) !important;
+  background-color: hsl(var(--primary) / 0.15) !important;
 }
 
 /* RTL Support */

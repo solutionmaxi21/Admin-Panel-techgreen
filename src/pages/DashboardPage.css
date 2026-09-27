@@ -108,7 +108,7 @@
 }
 
 .dashboard-container .stat-card.blue::after { 
-  background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+  background: linear-gradient(90deg, var(--primary-500) 0%, var(--primary-400) 100%);
 }
 .dashboard-container .stat-card.orange::after { 
   background: linear-gradient(90deg, #f97316 0%, #fb923c 100%);
@@ -222,16 +222,16 @@
 
 /* Blue - Revenue */
 .dashboard-container .stat-card.blue {
-  color: #3b82f6;
+  color: var(--primary-500);
 }
 .dashboard-container .stat-card.blue .stat-icon { 
-  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-  color: #1e40af;
-  border: 1px solid #93c5fd;
+  background: linear-gradient(135deg, var(--primary-100) 0%, var(--primary-200) 100%);
+  color: var(--primary-800);
+  border: 1px solid var(--primary-300);
 }
 .dashboard-container .stat-card.blue:hover .stat-icon {
-  background: linear-gradient(135deg, #bfdbfe 0%, #93c5fd 100%);
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  background: linear-gradient(135deg, var(--primary-200) 0%, var(--primary-300) 100%);
+  box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
 }
 
 /* Orange - Orders */
@@ -506,7 +506,7 @@
 .btn-link { background: none; border: none; color: hsl(var(--primary)); font-weight: 600; cursor: pointer; }
 .badge { padding: 4px 10px; border-radius: 9999px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; }
 .badge-yellow { background: #fefce8; color: #a16207; border: 1px solid #fef08a; }
-.badge-blue { background: #eff6ff; color: #1d4ed8; border: 1px solid #dbeafe; }
+.badge-blue { background: var(--primary-50); color: var(--primary-700); border: 1px solid var(--primary-100); }
 .badge-green { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
 .badge-red { background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; }
 .trend { font-weight: 600; padding: 2px 6px; border-radius: 4px; display: flex; align-items: center; gap: 4px;}

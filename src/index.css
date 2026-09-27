@@ -16,29 +16,35 @@
   /* ============================================
      2. LEGACY COLOR SYSTEM (Restored)
      ============================================ */
-  /* Primary: Deep Navy Blue */
-  --primary-50: hsl(220, 70%, 97%);
-  --primary-100: hsl(220, 65%, 92%);
-  --primary-200: hsl(220, 60%, 85%);
-  --primary-300: hsl(220, 55%, 70%);
-  --primary-400: hsl(220, 50%, 55%);
-  --primary-500: hsl(220, 60%, 35%);
-  --primary-600: hsl(220, 65%, 28%);
-  --primary-700: hsl(220, 70%, 22%);
-  --primary-800: hsl(220, 75%, 16%);
-  --primary-900: hsl(220, 80%, 12%);
+  /* Primary: bleu de marque #043b90
+     Releve sur la feuille de style de solutionmaxi.dz (--primary: #043b90).
+     L'ancienne rampe etait un bleu marine hsl(220 ...) proche mais faux : le
+     site travaille a teinte 216, saturation ~95%. */
+  --primary-50: hsl(216, 100%, 97%);
+  --primary-100: hsl(216, 92%, 93%);
+  --primary-200: hsl(216, 88%, 86%);
+  --primary-300: hsl(216, 82%, 72%);
+  --primary-400: hsl(216, 78%, 56%);
+  --primary-500: hsl(216, 95%, 29%);
+  --primary-600: hsl(216, 95%, 24%);
+  --primary-700: hsl(216, 94%, 19%);
+  --primary-800: hsl(217, 92%, 14%);
+  --primary-900: hsl(218, 90%, 10%);
 
-  /* Accent: Vibrant Orange */
-  --accent-50: hsl(35, 100%, 96%);
-  --accent-100: hsl(35, 100%, 90%);
-  --accent-200: hsl(35, 100%, 80%);
-  --accent-300: hsl(35, 98%, 70%);
-  --accent-400: hsl(35, 95%, 60%);
-  --accent-500: hsl(35, 92%, 50%);
-  --accent-600: hsl(35, 90%, 45%);
-  --accent-700: hsl(35, 85%, 40%);
-  --accent-800: hsl(35, 80%, 35%);
-  --accent-900: hsl(35, 75%, 30%);
+  /* Accent: orange de marque #fa5d36
+     Releve sur la feuille de style de solutionmaxi.dz (--accent: #fa5d36).
+     L'ancienne rampe etait un ambre hsl(35 ...) ; la marque est un orange
+     rouge a teinte 12. */
+  --accent-50: hsl(12, 100%, 97%);
+  --accent-100: hsl(12, 100%, 92%);
+  --accent-200: hsl(12, 100%, 84%);
+  --accent-300: hsl(12, 98%, 74%);
+  --accent-400: hsl(12, 96%, 67%);
+  --accent-500: hsl(12, 95%, 60%);
+  --accent-600: hsl(12, 88%, 51%);
+  --accent-700: hsl(12, 82%, 42%);
+  --accent-800: hsl(12, 76%, 34%);
+  --accent-900: hsl(12, 72%, 27%);
 
   /* Semantic Colors */
   --success-50: hsl(142, 76%, 95%);
@@ -102,24 +108,24 @@
   /* ============================================
       3.1 BENTO THEME TOKENS (Light)
       ============================================ */
-  --bento-bg: 220 20% 98%;
+  --bento-bg: 216 20% 98%;
   --bento-surface: 0 0% 100%;
-  --bento-surface-elevated: 220 18% 97%;
-  --bento-surface-strong: 220 16% 94%;
-  --bento-border: 220 16% 90%;
-  --bento-border-strong: 220 14% 82%;
-  --bento-ink: 222 47% 11%;
-  --bento-ink-muted: 220 12% 40%;
-  --bento-ink-subtle: 220 10% 55%;
-  --bento-accent: 220 65% 28%;
-  --bento-accent-strong: 220 70% 22%;
+  --bento-surface-elevated: 216 18% 97%;
+  --bento-surface-strong: 216 16% 94%;
+  --bento-border: 218 17% 88%;
+  --bento-border-strong: 218 15% 80%;
+  --bento-ink: 219 29% 9%;
+  --bento-ink-muted: 218 12% 40%;
+  --bento-ink-subtle: 218 10% 55%;
+  --bento-accent: 216 95% 29%;
+  --bento-accent-strong: 216 95% 23%;
   --bento-radius-sm: 10px;
   --bento-radius-md: 14px;
   --bento-radius-lg: 18px;
   --bento-gap: 20px;
   --bento-shadow-1: 0 1px 2px hsl(220 20% 10% / 0.06), 0 1px 0 hsl(220 20% 10% / 0.04);
   --bento-shadow-2: 0 8px 20px hsl(220 20% 10% / 0.12);
-  --bento-focus: 220 70% 45%;
+  --bento-focus: 216 85% 45%;
 
   /* Semantic surface mappings for legacy usage */
   --bg-primary: hsl(var(--bento-surface));
@@ -147,9 +153,25 @@
   --border: var(--bento-border);
   --input: var(--bento-border);
 
-  /* Accent (Your Orange) */
-  --accent: 21 90% 48%;
+  /* Accent : orange de marque #fa5d36 (releve sur solutionmaxi.dz).
+     La valeur precedente, 21 90% 48%, etait un orange rouge plus sombre que
+     celui du site ; seule .badge-dot (AdminLayout.css:389) la consomme. */
+  --accent: 12 95% 60%;
   --accent-foreground: 0 0% 100%;
+
+  /* Rouge destructif.
+     Reference 20 fois dans le code via hsl(var(--destructive)) — forms.css,
+     AdminLayout.css (ligne de deconnexion), DataTable.css, ResourceError.jsx,
+     BarcodeScannerPage.css, LoginPage.css, ProductsListPage.jsx — mais
+     JAMAIS defini jusqu'ici. Une declaration hsl(var(--destructive)) dont la
+     variable est absente est invalide et silencieusement abandonnee : tous
+     ces etats d'erreur ne s'affichaient pas. Defini ici, il les rend
+     visibles, ce qui est le comportement attendu. */
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  /* Bleu d'information, aligne sur la marque. */
+  --info: 216 95% 29%;
 
   /* Layout Dimensions */
   --sidebar-width: 260px;
@@ -160,20 +182,24 @@
 
 /* Dark Mode Overrides (Bento Grey) */
 [data-theme="dark"] {
-  --bento-bg: 0 0% 11%;
-  --bento-surface: 0 0% 15%;
-  --bento-surface-elevated: 0 0% 17%;
-  --bento-surface-strong: 0 0% 19%;
-  --bento-border: 0 0% 26%;
-  --bento-border-strong: 0 0% 32%;
+  /* Surfaces sombres reprises du site : --background #070b14, --card #0c121a,
+     --border #232933. L'ancien gris pur (0 0%) etait neutre ; la marque
+     travaille un bleu tres desature, teinte 214-222. */
+  --bento-bg: 222 48% 5%;
+  --bento-surface: 214 37% 8%;
+  --bento-surface-elevated: 216 30% 11%;
+  --bento-surface-strong: 216 25% 14%;
+  --bento-border: 218 19% 17%;
+  --bento-border-strong: 217 17% 27%;
   --bento-ink: 0 0% 98%;
-  --bento-ink-muted: 0 0% 80%;
-  --bento-ink-subtle: 0 0% 65%;
-  --bento-accent: 220 70% 62%;
-  --bento-accent-strong: 220 72% 55%;
+  --bento-ink-muted: 218 12% 72%;
+  --bento-ink-subtle: 218 10% 58%;
+  /* Le bleu clair du site en mode sombre : --primary #195cc7. */
+  --bento-accent: 217 78% 44%;
+  --bento-accent-strong: 217 78% 38%;
   --bento-shadow-1: 0 1px 2px hsl(0 0% 0% / 0.6), 0 1px 0 hsl(0 0% 0% / 0.5);
   --bento-shadow-2: 0 16px 32px hsl(0 0% 0% / 0.55);
-  --bento-focus: 220 70% 62%;
+  --bento-focus: 217 78% 55%;
 
   --status-primary-bg: hsl(220 30% 20%);
   --status-primary-text: hsl(220 70% 78%);
@@ -185,6 +211,22 @@
   --status-danger-text: hsl(0 75% 72%);
   --status-info-bg: hsl(210 30% 20%);
   --status-info-text: hsl(210 70% 75%);
+
+  /* La rampe --primary-* n'etait PAS surchargee en mode sombre : ses usages
+     (--primary-500/600/700, --primary-color, --color-primary) restaient bleu
+     marine sur un fond a 5% de luminosite, donc quasi illisibles. Le jeton
+     --primary basculait bien, lui, via --bento-accent — d'ou deux couleurs
+     "primaires" contradictoires dans la meme interface. */
+  --primary-50: hsl(216, 45%, 12%);
+  --primary-100: hsl(216, 45%, 17%);
+  --primary-200: hsl(216, 45%, 24%);
+  --primary-300: hsl(216, 50%, 38%);
+  --primary-400: hsl(216, 70%, 62%);
+  --primary-500: hsl(216, 82%, 58%);
+  --primary-600: hsl(216, 80%, 50%);
+  --primary-700: hsl(216, 78%, 43%);
+  --primary-800: hsl(216, 76%, 36%);
+  --primary-900: hsl(216, 74%, 30%);
 
   --bg-primary: hsl(var(--bento-surface));
   --bg-secondary: hsl(var(--bento-bg));

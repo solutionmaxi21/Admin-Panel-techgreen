@@ -243,7 +243,7 @@ export const PostCreationBarcodeModal = ({ product, onClose, onViewProduct }) =>
         }
 
         .info-value {
-          color: #0366d6;
+          color: var(--primary-500);
           font-family: 'SF Mono', 'Monaco', monospace;
           font-weight: 500;
         }
@@ -270,7 +270,7 @@ export const PostCreationBarcodeModal = ({ product, onClose, onViewProduct }) =>
           font-family: 'SF Mono', 'Monaco', 'Cascadia Code', monospace;
           font-size: 24px;
           font-weight: 600;
-          color: #0366d6;
+          color: var(--primary-500);
           letter-spacing: 2px;
           background: white;
           padding: 12px 16px;
@@ -303,8 +303,8 @@ export const PostCreationBarcodeModal = ({ product, onClose, onViewProduct }) =>
 
         .action-btn:hover:not(:disabled) {
           background: #f6f8fa;
-          border-color: #0366d6;
-          color: #0366d6;
+          border-color: var(--primary-500);
+          color: var(--primary-500);
         }
 
         .action-btn:disabled {
@@ -346,16 +346,16 @@ export const PostCreationBarcodeModal = ({ product, onClose, onViewProduct }) =>
 
         .btn-secondary:hover {
           background: #f6f8fa;
-          border-color: #0366d6;
+          border-color: var(--primary-500);
         }
 
         .btn-primary {
-          background: #0366d6;
+          background: var(--primary-500);
           color: white;
         }
 
         .btn-primary:hover {
-          background: #0256c7;
+          background: var(--primary-600);
         }
 
         @media (max-width: 600px) {

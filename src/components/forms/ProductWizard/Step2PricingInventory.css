@@ -21,7 +21,7 @@
 .section-icon {
   width: 24px;
   height: 24px;
-  stroke: #3b82f6;
+  stroke: var(--primary-500);
   stroke-width: 2;
 }
 
@@ -75,8 +75,8 @@
 }
 
 .stock-indicator.moderate-stock {
-  background: #eff6ff;
-  color: #2563eb;
+  background: var(--primary-50);
+  color: var(--primary-600);
 }
 
 .stock-indicator.good-stock {
@@ -113,9 +113,9 @@
 }
 
 .variant-stock-summary.moderate-stock {
-  border-color: #bfdbfe;
-  background: #eff6ff;
-  color: #1d4ed8;
+  border-color: var(--primary-200);
+  background: var(--primary-50);
+  color: var(--primary-700);
 }
 
 .variant-stock-summary.good-stock {
@@ -161,7 +161,7 @@
 }
 
 .stock-fill.moderate-stock {
-  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+  background: linear-gradient(90deg, var(--primary-500) 0%, var(--primary-600) 100%);
 }
 
 .stock-fill.good-stock {

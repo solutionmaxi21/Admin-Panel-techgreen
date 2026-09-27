@@ -49,7 +49,10 @@ const getNotificationColor = (type) => {
     NEW_ORDER: '#10b981',      // green
     NEW_RETURN: '#f59e0b',     // amber
     NEW_REVIEW: '#8b5cf6',     // violet
-    ORDER_STATUS: '#3b82f6',   // blue
+    // Doit rester un hex litteral : l'affichage fait `${color}20` pour fabriquer
+    // un hex a 8 chiffres (alpha). Un var() donnerait `var(...)20`, qui n'est pas
+    // une couleur. Bleu de marque #043b90.
+    ORDER_STATUS: '#043b90',
     RETURN_UPDATE: '#f59e0b',  // amber
     default: '#6b7280',        // gray
   };

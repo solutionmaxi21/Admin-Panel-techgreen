@@ -250,11 +250,11 @@ function PromotionsListPage() {
             {stats.active}
           </div>
         </div>
-        <div className="card" style={{ textAlign: 'center', padding: '1.5rem', borderLeft: '4px solid #3b82f6' }}>
+        <div className="card" style={{ textAlign: 'center', padding: '1.5rem', borderLeft: '4px solid var(--primary-500)' }}>
           <div style={{ fontSize: '0.875rem', color: 'var(--gray-500)', marginBottom: '0.5rem' }}>
             {t('promotions.stats.scheduled')}
           </div>
-          <div style={{ fontSize: '2rem', fontWeight: '700', color: '#3b82f6' }}>
+          <div style={{ fontSize: '2rem', fontWeight: '700', color: 'var(--primary-500)' }}>
             {stats.scheduled}
           </div>
         </div>

@@ -27,12 +27,21 @@ const StatusBadge = ({ status, type = 'default', label: labelProp }) => {
 
   const color = getColor();
 
-  // Styles using CSS Variables (hsl) to match your new theme
+  // Teintes alignees sur la marque : le bleu etait hsl(221 ...) — le bleu
+  // Tailwind, pas celui du site — et l'orange etait hsl(33 ...), un ambre,
+  // alors que la marque est un orange rouge a teinte 12. Le vert, le jaune, le
+  // rouge et le gris sont semantiques et inchanges.
+  //
+  // Volontairement laisse en litteraux plutot qu'en var(--primary-*) : ces
+  // entrees vert/jaune/rouge/gris n'ont pas d'equivalent qui bascule en mode
+  // sombre, donc tokeniser seulement le bleu et l'orange produirait des
+  // pastilles sombres a cote de pastilles claires dans la meme liste. Le mode
+  // sombre de ces pastilles reste un chantier a part.
   const styles = {
     green: { backgroundColor: 'hsl(142 76% 96%)', color: 'hsl(142 76% 36%)', border: '1px solid hsl(142 76% 80%)' },
-    blue: { backgroundColor: 'hsl(214 95% 93%)', color: 'hsl(221 83% 53%)', border: '1px solid hsl(214 95% 85%)' },
+    blue: { backgroundColor: 'hsl(216 95% 94%)', color: 'hsl(216 95% 32%)', border: '1px solid hsl(216 88% 84%)' },
     yellow: { backgroundColor: 'hsl(48 96% 89%)', color: 'hsl(32 95% 44%)', border: '1px solid hsl(48 96% 75%)' },
-    orange: { backgroundColor: 'hsl(33 100% 96%)', color: 'hsl(26 90% 37%)', border: '1px solid hsl(33 100% 80%)' },
+    orange: { backgroundColor: 'hsl(12 100% 96%)', color: 'hsl(12 88% 34%)', border: '1px solid hsl(12 100% 82%)' },
     purple: { backgroundColor: 'hsl(262 83% 96%)', color: 'hsl(262 83% 58%)', border: '1px solid hsl(262 83% 85%)' },
     red: { backgroundColor: 'hsl(0 84% 96%)', color: 'hsl(0 84% 60%)', border: '1px solid hsl(0 84% 85%)' },
     gray: { backgroundColor: 'hsl(220 14% 96%)', color: 'hsl(220 12% 40%)', border: '1px solid hsl(220 16% 90%)' },

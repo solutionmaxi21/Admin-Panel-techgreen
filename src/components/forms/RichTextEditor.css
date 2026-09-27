@@ -14,8 +14,8 @@
 }
 
 .rich-text-editor:focus-within {
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
 }
 
 /* Toolbar Styling */
@@ -41,7 +41,7 @@
 }
 
 .rich-text-editor .ql-toolbar button.ql-active {
-  background: #3b82f6;
+  background: var(--primary-500);
   color: white;
 }
 
@@ -162,12 +162,12 @@
 }
 
 .rich-text-editor .ql-editor a {
-  color: #3b82f6;
+  color: var(--primary-500);
   text-decoration: underline;
 }
 
 .rich-text-editor .ql-editor a:hover {
-  color: #2563eb;
+  color: var(--primary-600);
 }
 
 /* Meta Information */

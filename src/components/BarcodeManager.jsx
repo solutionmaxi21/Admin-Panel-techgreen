@@ -206,7 +206,7 @@ export const BarcodeManager = ({
           }
 
           .barcode-label svg {
-            color: #0366d6;
+            color: var(--primary-500);
           }
 
           .barcode-value {
@@ -220,7 +220,7 @@ export const BarcodeManager = ({
             font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Courier New', monospace;
             font-size: 14px;
             font-weight: 500;
-            color: #0366d6;
+            color: var(--primary-500);
             background: white;
             padding: 0.375rem 0.75rem;
             border-radius: 4px;
@@ -250,8 +250,8 @@ export const BarcodeManager = ({
 
           .btn-icon:hover {
             background: #f6f8fa;
-            border-color: #0366d6;
-            color: #0366d6;
+            border-color: var(--primary-500);
+            color: var(--primary-500);
           }
 
           .btn-generate-compact {
@@ -259,7 +259,7 @@ export const BarcodeManager = ({
             align-items: center;
             gap: 0.5rem;
             padding: 0.375rem 0.875rem;
-            background: #0366d6;
+            background: var(--primary-500);
             color: white;
             border: none;
             border-radius: 4px;
@@ -270,7 +270,7 @@ export const BarcodeManager = ({
           }
 
           .btn-generate-compact:hover:not(:disabled) {
-            background: #0256c7;
+            background: var(--primary-600);
           }
 
           .btn-generate-compact:disabled {

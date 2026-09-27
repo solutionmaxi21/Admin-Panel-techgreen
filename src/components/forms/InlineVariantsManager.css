@@ -230,8 +230,8 @@
 }
 
 .ivm-warehouse-tag {
-    background: #dbeafe;
-    color: #1e40af;
+    background: var(--primary-100);
+    color: var(--primary-800);
 }
 
 .ivm-supplier-tag {
@@ -241,7 +241,7 @@
 
 [data-theme='dark'] .ivm-warehouse-tag {
     background: #1e3a5f;
-    color: #93c5fd;
+    color: var(--primary-300);
 }
 
 [data-theme='dark'] .ivm-supplier-tag {
@@ -262,7 +262,7 @@
     align-items: center;
     gap: 4px;
     padding: 3px 10px;
-    background: #dbeafe;
+    background: var(--primary-100);
     color: var(--primary-color, #0366d6);
     font-size: 11px;
     font-weight: 600;
@@ -373,7 +373,7 @@
 .ivm-field select:focus {
     outline: none;
     border-color: var(--primary-color, #0366d6);
-    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.15);
+    box-shadow: 0 0 0 3px hsl(var(--primary) / 0.15);
 }
 
 .ivm-field input.valid {
@@ -472,11 +472,11 @@
 .ivm-action-btn.default-btn {
     background: #f0f9ff;
     color: var(--primary-color, #0366d6);
-    border-color: #bfdbfe;
+    border-color: var(--primary-200);
 }
 
 .ivm-action-btn.default-btn:hover {
-    background: #dbeafe;
+    background: var(--primary-100);
 }
 
 .ivm-action-btn.save-btn {

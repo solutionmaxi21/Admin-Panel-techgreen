@@ -407,8 +407,8 @@
 }
 
 [data-theme='dark'] .stat-badge-primary {
-  background: rgba(59, 130, 246, 0.2);
-  color: #93c5fd;
+  background: hsl(var(--primary) / 0.2);
+  color: var(--primary-300);
 }
 
 [data-theme='dark'] .stat-badge-success {

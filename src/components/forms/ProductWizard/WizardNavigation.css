@@ -65,16 +65,16 @@
 }
 
 .btn-primary {
-  background: #3b82f6;
+  background: var(--primary-500);
   color: white;
-  border: 1px solid #3b82f6;
+  border: 1px solid var(--primary-500);
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: #2563eb;
-  border-color: #2563eb;
+  background: var(--primary-600);
+  border-color: var(--primary-600);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 12px hsl(var(--primary) / 0.3);
 }
 
 .btn-submit {

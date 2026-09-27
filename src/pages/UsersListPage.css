@@ -145,7 +145,7 @@
 }
 
 .user-avatar.color-1 {
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
 }
 
 .user-avatar.color-2 {

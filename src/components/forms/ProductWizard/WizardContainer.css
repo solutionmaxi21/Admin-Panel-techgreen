@@ -100,14 +100,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #eff6ff;
+  background: var(--primary-50);
   border-radius: 50%;
 }
 
 .draft-prompt-icon svg {
   width: 32px;
   height: 32px;
-  stroke: #3b82f6;
+  stroke: var(--primary-500);
   stroke-width: 2;
 }
 
